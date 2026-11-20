@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1728">
+<title>HASHEM ENGINEERING</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">HE</div><div><b>HASHEM ENGINEERING</b><small>UNIVERSITY ENGINEERING LIBRARY</small></div></div>
+    <nav id="nav">
+      <button data-page="home" class="nav-item active">⌂ <span>الرئيسية</span></button>
+      <button data-page="library" class="nav-item">▤ <span>المكتبة الهندسية</span></button>
+      <button data-page="mybooks" class="nav-item">▣ <span>كتبي</span></button>
+      <button data-page="learning" class="nav-item">◷ <span>تعلمي وتقدمي</span></button>
+      <button data-page="equations" class="nav-item">∑ <span>مكتبة المعادلات</span></button>
+      <button data-page="simlab" class="nav-item">⌁ <span>مختبر المحاكاة</span></button>
+      <button data-page="calculators" class="nav-item">▦ <span>الحاسبات الهندسية</span></button>
+      <button data-page="exams" class="nav-item">✓ <span>الاختبارات</span></button>
+      <button data-page="bookmarks" class="nav-item">☆ <span>الإشارات المرجعية</span></button>
+      <button data-page="notes" class="nav-item">✎ <span>ملاحظاتي</span></button>
+      <button data-page="settings" class="nav-item">⚙ <span>الإعدادات</span></button>
+    </nav>
+    <div class="sidebar-foot">Created by <b>Hashem AL-Shagthah</b><br><span>Local-first • Offline-ready</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn mobile-menu" id="menuBtn" aria-label="القائمة">☰</button>
+      <div class="crumb" id="breadcrumb">المكتبة الهندسية / الرئيسية</div>
+      <div class="top-actions">
+        <button class="icon-btn" id="globalSearchBtn" title="بحث">⌕</button>
+        <button class="primary small" id="quickAdd">＋ إضافة كتاب</button>
+      </div>
+    </header>
+    <section id="view" class="view"></section>
+    <footer class="mobile-footer">HASHEM ENGINEERING <span>•</span> Created by Hashem AL-Shagthah</footer>
+  </main>
+</div>
+
+<dialog id="modal">
+  <form method="dialog" class="modal-card" id="modalForm">
+    <button class="close" value="cancel" aria-label="إغلاق">×</button>
+    <div id="modalContent"></div>
+  </form>
+</dialog>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
