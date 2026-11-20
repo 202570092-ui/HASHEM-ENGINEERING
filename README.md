@@ -1,24 +1,31 @@
-# HASHEM ENGINEERING
-Created by Hashem AL-Shagthah
+# HASHEM ENGINEERING — Multi-Book Engineering Library
 
-موقع تعليمي هندسي عربي، متوافق مع الهاتف، ويدعم التثبيت كتطبيق ويب تقدمي (PWA).
+A mobile-first, local-first Progressive Web App prototype.
 
-## التشغيل والنشر
-- ارفع جميع الملفات والمجلدات كما هي إلى مستودع GitHub.
-- من المستودع افتح Settings ثم Pages.
-- اختر Deploy from a branch، ثم الفرع main والمجلد /(root)، ثم Save.
-- بعد النشر سيظهر رابط الموقع في صفحة Pages.
-- يمكن فتح الرابط من Chrome ثم قائمة المتصفح ثم Add to Home screen.
+## Run locally
+- For best results serve this folder from an HTTPS host or localhost.
+- Example: `python -m http.server 8000` then open `http://localhost:8000`.
+- Service worker/PWA installation requires HTTPS (localhost is accepted for development).
 
-## الميزات الحالية
-- 12 تخصصًا هندسيًا.
-- تسجيل كتب وفصول وموضوعات يدويًا.
-- شروحات ومعادلات قابلة للتحرير لكل موضوع.
-- بحث محلي، تقدم دراسي، إشارات مرجعية وملاحظات.
-- حاسبات قانون أوم والتردد الزاوي والقدرة.
-- محاكاة استجابة نظام من الرتبة الأولى.
-- اختبار تدريبي، نسخ احتياطي واستعادة JSON.
-- تخزين محلي باستخدام IndexedDB، وكاش للعمل دون اتصال بعد أول تحميل.
+## Install on phone
+- Deploy the folder to an HTTPS static host.
+- Android: open the deployed address in Chrome → menu → Install app / Add to Home screen.
+- iPhone: open in Safari → Share → Add to Home Screen.
 
-## حدود النسخة
-هذه نسخة أولية عملية وليست نظام ذكاء اصطناعي كاملًا. إضافة PDF ومعالجته تلقائيًا، OCR، استخراج الفهرس، والشرح الآلي بواسطة نموذج محلي لم تُنفذ بعد، وهي ضمن مرحلة التطوير التالية. النسخة الاحتياطية لا تتضمن ملفات PDF. امسح بيانات المتصفح فقط بعد تصدير نسخة احتياطية.
+## Included
+- 12 engineering categories; add custom categories.
+- Independent books with PDF upload stored in IndexedDB.
+- Independent chapter/topic hierarchy.
+- Per-topic explanations, equations, notes, bookmarks.
+- Learning progress records.
+- Unified search across book metadata, chapters, topics and equations.
+- Basic calculators and a first-order step-response simulation.
+- Exam creation and simple answer checking.
+- JSON backup/restore for metadata and learning data.
+
+## Important current limitations
+- PDF upload stores the original PDF and lets you open it, but automatic OCR/table-of-contents extraction and AI explanation are not implemented yet. Add chapters/topics manually from the book's actual contents.
+- The exam editor uses a simple `question | exact answer` format, not a full MCQ authoring system.
+- JSON backup excludes PDF binary files to keep backups manageable. Keep original PDFs separately.
+- Data is local to the browser/device. Clearing browser site data can erase it. Export backups regularly.
+- This is a functional first version, not yet a production-hardened release. Test backup/restore before storing important material.
